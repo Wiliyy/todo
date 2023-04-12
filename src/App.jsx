@@ -1,19 +1,17 @@
-import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
-import TaskForm from './components/TaskForm'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Tasks from './pages/Tasks'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="app">
       <Header />
+
         <Routes>
-          <Route path="/tasks" element={<TaskForm />} exact/>
+          <Route path="/" element={<Tasks />} />
           <Route path="/login" element={<Login />} exact/>
           <Route path="/register" element={<Register />} exact/>
         </Routes>
