@@ -329,7 +329,8 @@ margin-bottom: 10px;
   border-radius: 50px;
   font-size: 35px;
   color: var(--secondary-color-4);
-  box-shadow: -1px -0px 10px 0px var(--input-shadow); 
+  -webkit-box-shadow: -1px -0px 10px 0px var(--input-shadow);
+          box-shadow: -1px -0px 10px 0px var(--input-shadow); 
   cursor: pointer;
 }
 
