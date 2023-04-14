@@ -15,7 +15,7 @@ const Tasks = () => {
   return (
     <div className="TodoApp">
         <h1>Welcome back <span>{username}</span></h1>
-        {tasks.length >0 && <p style={{color:"#555"}}>You've got {tasks.length} / {completed} {tasks.length >1? "tasks" : "task"} </p>}
+        {tasks.length >0 && <p style={{color:"#555"}}>You've got {tasks.length - completed} {tasks.length >1? "tasks" : "task"} </p>}
 
         <TaskForm />        
         
