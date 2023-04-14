@@ -1,7 +1,6 @@
 // import './App.css'
 // import TodoList from './TodoList';
 import uuid from 'react-uuid';
-import { Icon } from '@iconify/react';
 import { useState  , useEffect , useRef } from 'react'
 import TaskList from './TaskList';
 import useTask_context from '../hooks/useTasks_context';
