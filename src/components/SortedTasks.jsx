@@ -4,9 +4,9 @@ import { BiEdit } from "react-icons/bi";
 import { BiTrashAlt } from "react-icons/bi";
 import TaskContainer from './TaskContainer';
 const SortedTasks = () => {
-    const {tasks} = useTask_context()
+    const {tasks , todos} = useTask_context()
   return (
-        tasks.reverse().map((task, index) => {
+        todos.reverse().map((task, index) => {
             return <TaskContainer task={task} index={index}/>
         }
   )

@@ -1,33 +1,31 @@
 import React from 'react'
 import {useState} from 'react'
-// import { Icon } from '@iconify/react';
 
 import useTask_context from '../hooks/useTasks_context';
-import { FilterdTasks } from './FilterdTasks';
-import SortedTasks from './SortedTasks';
-import TaskEdit from './TaskEdit';
+
+import TaskContainer from './TaskContainer';
 
 export default function TaskList() { 
-    const {tasks} = useTask_context()
-
+    const {tasks ,todos} = useTask_context()
     const [filter, setfilter] = useState(false)
+    var prioritys = [ "Low", "Medium", "High"];
+    // const sorted = () => { return filter ? todos.sort((a, b) => prioritys.indexOf(a.priority) < prioritys.indexOf(b.priority) ): todos.sort((a, b) => a.isComplete - b.isComplete)};
+    const sorted = () => { return filter ? todos.sort((a, b) => prioritys.indexOf(a.priority) < prioritys.indexOf(b.priority) ): todos.reverse()};
 
-    
     
     
     try{
         return  <>    
             {
-                tasks.length > 0 && 
+                todos.length > 0 && 
                 <div style={{background:filter ? "#fff" : "#eee"}} onClick={() => setfilter(prev=>!prev)} className='task_filter'>
                     <p>Filter By Priority</p>
                 </div>
             }
             {
-            filter ?
-                <FilterdTasks filter={filter} />
-            :   
-               <SortedTasks /> 
+                sorted().map((task , index) => {            
+                    return <TaskContainer task={task} index={index}/>
+                })
             }  
         </>  
     }             

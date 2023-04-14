@@ -34,9 +34,8 @@ html ,body {
 
 .app {
   padding: 5px 80px 0 80px;
-  /* min-height: 100vh; */
   display: grid;
-  grid-template-rows: .1fr 1fr .1fr;
+  grid-template-rows: .03fr 1fr;
   font-size: 1.4rem;
   color: var(--secondary-color-4);
 }

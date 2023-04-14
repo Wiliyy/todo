@@ -3,10 +3,10 @@ import useTask_context from "../hooks/useTasks_context";
 import TaskForm from "./TaskForm";
 
 const TaskEdit = ({task  , hideEdit}) => {
+  const {tasks ,settodos , todos, editTask} = useTask_context()
   const [show_nav , set_show_nav] =useState(false)
   const [newprioerty , setnewpriorety] = useState(task.priority)
   const [newtitle , setnewtitle] = useState(task.text)
-  const {tasks , editTask} = useTask_context()
   const inputRef = useRef(null);
   const [errorMessage, seterrorMessage] = useState();
 
@@ -20,7 +20,11 @@ const TaskEdit = ({task  , hideEdit}) => {
       seterrorMessage("you must enter value")
     } else {
       seterrorMessage("")
-      editTask(task.id , newtitle , newprioerty);
+      // settodos(
+      //   [...todos , {text:newtitle  , priority:newprioerty }]
+      // )
+      console.log(newtitle);
+      editTask(task.id , newtitle , newprioerty , task.isComplete);
       hideEdit();
     }
   }

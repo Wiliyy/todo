@@ -4,9 +4,11 @@ import { BiTrashAlt } from "react-icons/bi";
 import useTask_context from '../hooks/useTasks_context';
 import TaskEdit from './TaskEdit';
 const TaskContainer = ({task , index}) => {
-    const {removetask , completetask} = useTask_context()
-
+    const {removetask , completetask } = useTask_context()
+    console.log(task);
     const [showedit,setshowedit]= useState(false)
+
+
     function handleremove(id){
         removetask(id);
     }
@@ -17,6 +19,7 @@ const TaskContainer = ({task , index}) => {
 
     const handleEdit =()=>{
         setshowedit(!showedit);
+
     }
 
 
@@ -25,12 +28,6 @@ const TaskContainer = ({task , index}) => {
             { showedit?
             (       
                 <TaskEdit  hideEdit={handleEdit} task={task} />
-                // <>
-                // <h1>edit</h1>
-                //     <button onClick={() => handleEdit(task.id)} className={task.isComplete ?  'Task__List__icons__completed' : "Task__List__icons"}>
-                //         <BiEdit /> 
-                //     </button>
-                // </>
             )
             :
             (

@@ -1,23 +1,42 @@
-import {useState , createContext} from 'react'
+import axios from 'axios';
+import {useState , createContext, useEffect} from 'react'
 import uuid from 'react-uuid';
 
 
 const Tasks_context = createContext()
 
 const Provider = ({children}) => {
+  // const [tasks, settasks] = useState([])
   const [tasks, settasks] = useState([])
+  const [todos, settodos] = useState([])
   const [completed, setcompleted] = useState(0)
   
-  function createTask(task){
-        settasks(
-            [ ...tasks , { id:task[0].id ,  text: task[0].text , isComplete:false , priority : task[0].priority  }]
-        );
+  const gettasks=async()=>{
+    const {data} = await axios.get("http://localhost:8080/tasks")
+    settodos(data)
+  }
+  useEffect(() => {
+    
+    gettasks()
+    
+  },[])
+  
+  async function createTask(task){
+        // settasks(
+        //     [ ...tasks , { id:task[0].id ,  text: task[0].text , isComplete:false , priority : task[0].priority  }]
+        // );
+        const {data} = await axios.post("http://localhost:8080/tasks" , task);
+        settodos(
+          [ ...todos , data]
+          )       
   }
   
-  function removetask(id){
-    settasks(
-        [...tasks].filter(list => list.id !== id)
-    );
+  async function removetask(id){
+    await axios.delete(`http://localhost:8080/tasks/${id}`)
+    gettasks()
+    // settasks(
+    //     [...tasks].filter(list => list.id !== id)
+    // );
   }
 
   function completetask(id){
@@ -31,20 +50,16 @@ const Provider = ({children}) => {
     settasks(updatedTask);
   }
 
-  const editTask = (id , newTask_text , prioerty)=>{
-    settasks(
-      tasks.map((task)=>{
-        return id === task.id ? {
-          ...task ,  text:newTask_text , priority:prioerty
-        }:
-        {...task };
-      })
-    )
+  const editTask = async (id , newTask_text , priority , isComplete)=>{
+      const {data} = await axios.put(`http://localhost:8080/tasks/${id}` , {id:id ,text:newTask_text , priority:priority ,isComplete:isComplete });
+      gettasks()
   }
 
   const value_to_share={
     tasks,
     completed,
+    todos,
+    settodos,
     createTask,
     completetask,
     editTask,

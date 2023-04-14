@@ -24,12 +24,14 @@ function TaskForm() {
     setpriorety(e.target.textContent);
     set_show_nav(state=>!state);
   }
+  
   function addtask(e){
     e.preventDefault();
     if (!inputRef.current.value || /^\s*$/.test(inputRef.current.value)) {
       seterrorMessage("you must enter value")
     } else {
-      const newTask = [{ id: uuid(),  text: input , isComplete:false , priority:prioerty  }, ...tasks];
+      const newTask = {text: input , isComplete:false , priority:prioerty};
+      console.log(newTask);
     //   setTasks(newTask);
       createTask(newTask)
       seterrorMessage("")
