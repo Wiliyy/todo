@@ -307,16 +307,18 @@ margin-bottom: 10px;
   border-radius:10px;
   font-size: 18px;
   padding: 0 0 0 3%;
+  -webkit-appearance: none;
   box-shadow: -1px -0px 10px 0px var(--input-shadow);
   -webkit-box-shadow: -1px -0px 10px 0px var(--input-shadow);
   }
 .todo-button{
-  width: 50px !important;
+  Max-width: 45px !important;
   height: 50px;
   background-color: var(--background-color);
-  border-radius:50px;
+  border-radius:2rem;
   font-size: 35px;
   color: var(--secondary-color-4);
+  -webkit-appearance: none;
   box-shadow: -1px -0px 10px 0px var(--input-shadow);
   -webkit-box-shadow: -1px -0px 10px 0px var(--input-shadow);
 }
