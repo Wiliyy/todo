@@ -15,9 +15,9 @@ const Provider = ({children}) => {
   }
   
   function removetask(id){
-    settasks(
-        [...tasks].filter(list => list.id !== id)
-    );
+    const removedArr = [...tasks].filter(list => list.id !== id);
+    const arr = [...tasks].map(list => {if (list.id === id) {list.isComplete ? setcompleted(completed - 1) : setcompleted(completed)}  });
+    settasks(removedArr);
   }
 
   function completetask(id){

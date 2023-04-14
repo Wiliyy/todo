@@ -50,8 +50,8 @@ const TaskEdit = ({task  , hideEdit}) => {
                     <p onClick={handleChange_priorety}><span style={{ background:"#e43d4b"}} className="priorety__circle"></span>High</p>
                 </div>
                 }
-            <button  className='todo-button'>
-            edit
+            <button  className='Task__Edit__input'>
+            save
             </button>
         </form>
         <p className="Task__input__errorMessage"> {errorMessage}  </p>

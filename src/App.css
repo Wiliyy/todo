@@ -318,13 +318,23 @@ nav:hover{
   padding: 0 0 0 20px;
   box-shadow: -1px -0px 10px 0px var(--input-shadow);
 }
-.Task__input button{
+.todo-button{
   background-color: var(--background-color);
   width: 50px;
   border-radius:50px;
   font-size: 35px;
   color: var(--secondary-color-4);
   box-shadow: -1px -0px 10px 0px var(--input-shadow);
+}
+
+.Task__Edit__input{
+  background-color: var(--background-color);
+  width: 100px;
+  border-radius: 50px;
+  font-size: 35px;
+  color: var(--secondary-color-4);
+  box-shadow: -1px -0px 10px 0px var(--input-shadow); 
+  cursor: pointer;
 }
 
 .Task__input__errorMessage{

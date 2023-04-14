@@ -30,7 +30,8 @@ function TaskForm() {
     if (!inputRef.current.value || /^\s*$/.test(inputRef.current.value)) {
       seterrorMessage("you must enter value")
     } else {
-      const newTask = {text: input , isComplete:false , priority:prioerty};
+      // const newTask = {text: input , isComplete:false , priority:prioerty};
+      const newTask = [{ id: uuid(),  text: input , isComplete:false , priority:prioerty  }, ...tasks];
       console.log(newTask);
     //   setTasks(newTask);
       createTask(newTask)
