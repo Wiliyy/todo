@@ -281,7 +281,7 @@ margin-bottom: 10px;
 }
 
 .select__active {
-  background: var(--secolndary-color-4);
+  background: var(--secondary-color-4);
   color: #fff;
   border-radius: 1rem;
   position: absolute;
