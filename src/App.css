@@ -61,15 +61,8 @@ a{
 }
 
 @media screen and (max-width: 768px){
-  .app{
-    padding: 5px 1% 0 1%;
-   }
-  .todo-button{
-   width:25px;
-   }
-   .Task__input input{
-     padding:0;
-   }
+  
+ 
 }
 
 
