@@ -43,7 +43,7 @@ html ,body {
 
 .app {
   width:100%;
-  padding: 5px 3% 0 3%;
+  
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: .03fr 1fr;
@@ -388,7 +388,6 @@ margin-bottom: 10px;
   height: 50px;
   border-radius:10px;
   font-size: 18px;
-  padding: 0 0 0 3%;
   -webkit-appearance: none;
   box-shadow: -1px -0px 10px 0px var(--input-shadow);
   -webkit-box-shadow: -1px -0px 10px 0px var(--input-shadow);
