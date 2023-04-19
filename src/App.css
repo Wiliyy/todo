@@ -41,6 +41,9 @@ html ,body {
   color: var(--secondary-color-4);
 }
 
+#root{
+width:100%;
+}
 .app {
   width:100%;
   
