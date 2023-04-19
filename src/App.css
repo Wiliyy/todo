@@ -387,7 +387,7 @@ margin-bottom: 10px;
   -webkit-box-shadow: -1px -0px 10px 0px var(--input-shadow);
   }
 .todo-button{
-  Max-width: 45px !important;
+  Max-width: 45px auto;
   height: 50px;
   background-color: var(--background-color);
   border-radius:2rem;
