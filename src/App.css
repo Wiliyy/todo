@@ -43,7 +43,7 @@ html ,body {
 
 .app {
   width:100%;
-  
+  padding: 5px 3% 0 3%;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: .03fr 1fr;
@@ -61,9 +61,15 @@ a{
 }
 
 @media screen and (max-width: 768px){
-  #root {
-    width: 100%;
-  }
+  .app{
+    padding: 5px 1% 0 1%;
+   }
+  .todo-button{
+   width:25px;
+   }
+   .Task__input input{
+     padding:0;
+   }
 }
 
 
@@ -379,7 +385,6 @@ margin-bottom: 10px;
 .Task__input input{
   background-color: var(--background-color-5);
   color:var(--secondary-color-4);
-  width:auto;
   height: 50px;
   border-radius:10px;
   font-size: 18px;
