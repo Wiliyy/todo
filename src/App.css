@@ -326,7 +326,7 @@ margin-bottom: 10px;
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2% auto 2% auto;
+  -ms-grid-columns: 1fr auto auto;
   grid-template-columns: 1fr auto auto;
   gap: 0.5%;
   position: relative;
