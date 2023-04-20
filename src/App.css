@@ -328,7 +328,7 @@ margin-bottom: 10px;
   display: grid;
   -ms-grid-columns: 1fr 2% auto 2% auto;
   grid-template-columns: 1fr auto auto;
-  gap: 2%;
+  gap: 1%;
   position: relative;
 }
 
