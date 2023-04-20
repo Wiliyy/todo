@@ -75,7 +75,7 @@ a{
  .header {
   -ms-flex-item-align: start;
       align-self: flex-start;
-   padding: 10px 0;
+   padding: 10px;
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -109,7 +109,7 @@ nav{
   text-transform: capitalize;
   font-size:1rem;
   cursor: pointer;
-  padding: 15px;
+  
 }
 
 nav:hover{
@@ -318,7 +318,7 @@ margin-bottom: 10px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  padding: 50px 150px 50px 150px;
+  
   background-color: var(--background-color);
 }
 
@@ -392,7 +392,7 @@ margin-bottom: 10px;
   Max-width: 45px auto;
   height: 50px;
   background-color: var(--background-color);
-  border-radius:2rem;
+  border-radius:100%;
   font-size: 35px;
   color: var(--secondary-color-4);
   -webkit-appearance: none;
