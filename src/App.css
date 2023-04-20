@@ -75,7 +75,7 @@ a{
  .header {
   -ms-flex-item-align: start;
       align-self: flex-start;
-   padding: 10px;
+   padding: 10px 0;
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
