@@ -9,8 +9,6 @@ const Tasks = () => {
     const {tasks , completed} = useTask_context()
 
     const [username, setusername] = useState("")
-
-
     
   return (
     <div className="TodoApp">
