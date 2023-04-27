@@ -312,8 +312,7 @@ margin-bottom: 10px;
   border-radius:10px;
   font-size: 18px;
   padding: 0 0 0 3%;
-  box-shadow: -1px -0px 10px 0px var(--primary-background-3);
-  border: 0;
+  box-shadow: -1px -0px 10px 0px var(--primary-background-3);  
 }
 .todo-button{
   width: 50px!important;
