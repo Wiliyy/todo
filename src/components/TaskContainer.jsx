@@ -24,7 +24,7 @@ const TaskContainer = ({task , index}) => {
 
 
     return (
-        <div className={task.isComplete ?  'Task__List__completed' : 'Task__List__lift'} key={index} >
+        <div className={task.isComplete ?  'Task__Container--completed' : 'Task__Container'} key={index} >
             { showedit?
             (       
                 <TaskEdit  hideEdit={handleEdit} task={task} />
@@ -33,7 +33,7 @@ const TaskContainer = ({task , index}) => {
             (
                 <>
                 <div className={'Task__List'} key={task.id} onClick={()=>handlecomplete(task.id)}>
-                    <h4 className={task.isComplete ?  'Listtext__completed' : 'Listtext__left'}>
+                    <h4 className={task.isComplete ?  'ListText__completed' : 'Listtext__left'}>
                         {task.text}
                     </h4>
                     <div style={{color:task.priority.substring(0,1)=="M" &&"#182039",background:task.priority.substring(0,1) =="L" ? "#114487" :task.priority.substring(0,1)=="M" ?"#f6d55d" : "#e43d4b"}} className='Task_priority'>
