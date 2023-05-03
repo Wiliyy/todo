@@ -335,7 +335,6 @@ margin-bottom: 10px;
 
 
 .Task__List__icons {
-  margin: 10px;
   border: 0px solid #000;
   background-color: transparent;
   font-size: 24px;
@@ -429,7 +428,7 @@ margin-bottom: 10px;
 }
 
 .Task_priority {
-  width: 5%;
+  width:fit-content;
   border-radius: 1rem;
   padding: 10px;
   height: 19%;
