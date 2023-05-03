@@ -304,9 +304,7 @@ margin-bottom: 10px;
 
 .Task__Edit__input{
   background-color: var(--background-color);
-  width: 100px;
   border-radius: 50px;
-  font-size: 35px;
   color: var(--secondary-color);
   box-shadow: -1px -0px 10px 0px var(--primary-background-1); 
   cursor: pointer;
